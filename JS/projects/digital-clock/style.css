@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #212121; 
+    color: white; 
+}
+.centre {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#banner {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#clock {
+    width: 300px;
+    height: 120px;
+    background-color: orange;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    font-weight: bold;
+}
