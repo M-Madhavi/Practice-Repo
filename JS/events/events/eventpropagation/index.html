@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="places">
+            <li id="eiffel-tower">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg"
+                    alt="Eiffel Tower">
+                <p>Eiffel Tower, France</p>
+            </li>
+
+            <li id="taj-mahal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg" alt="Taj Mahal">
+                <p>Taj Mahal, India</p>
+            </li>
+
+            <li id="great-wall">
+                <img src="https://picsum.photos/300/200?random=3" alt="Great Wall of China">
+                <p>Great Wall of China</p>
+            </li>
+
+            <li id="statue-liberty">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg"
+                    alt="Statue of Liberty">
+                <p>Statue of Liberty, USA</p>
+            </li>
+
+            <li id="machu-picchu">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg"
+                    alt="Machu Picchu">
+                <p>Machu Picchu, Peru</p>
+            </li>
+
+            <li id="sydney-opera">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sydney_Opera_House_Sails.jpg"
+                    alt="Sydney Opera House">
+                <p>Sydney Opera House, Australia</p>
+            </li>
+            <li id="google">
+                <a href="https://google.com" target="_blank" style="color: rgb(244, 211, 166);">
+                    Google
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+<!-- <script src="event.js"></script> -->
+<script>
+    // document.getElementById('eiffel-tower').onclick = function(){
+    //     alert("clicked eiffel-tower")
+    // }
+    //attachEvent()
+    //jQuery - on
+
+    //type,timestamp, defaultPrevent
+    //target, toElement,srcElement,currentTarget
+    //clientX,clienty,screenX,screeny
+    //altkey,ctrlkey,shifkey,keycode
+
+    //below is the best approach
+    // document.getElementById('places').addEventListener('click', function (e) {
+    //     console.log("click inside the ul");
+    //     // alert("click inside the ul")
+
+
+    // }, false)
+    // document.getElementById('eiffel-tower').addEventListener('click', function (e) {
+    //     console.log("clicked eiffel-tower");
+    //     e.stopPropagation()//->stops event bubling
+    //     // alert("clicked eiffel-tower")
+    // }, true)//->event Capturing
+    // //event Propagation - has 2 context 1.event Bubbling -(above false - lower elements to upper elements) 2.event Capturing- (change false to true in above)
+
+    // document.getElementById('google').addEventListener('click', (e) => {
+    //     e.preventDefault()// now it will not navigate us to google page
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+
+    // }, false)
+    document.querySelector('#places').addEventListener('click',(e) =>{
+        console.log("log",e.target.parentNode,e.target.tagName)
+        // let removeIt = e.target.parentNode
+        // removeIt.remove()
+        // removeIt.parentNode.removeChild(removeIt)
+        if(e.target.tagName === 'IMG'){
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout</title>
+</head>
+
+<body>
+    <h2>Testing TimeOut</h2>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayHello = () => {
+        console.log("Hello");
+
+    }
+    const changeHeader = function(){
+        document.querySelector('h2').innerHTML = "Hello from setTimeout"
+
+    }
+    const timeout = setTimeout(changeHeader, 2000)
+
+    document.querySelector('#stop')
+</script>
+
+</html>
