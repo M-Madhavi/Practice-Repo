@@ -1,8 +1,7 @@
-import dotenv from 'dotenv'
+import 'dotenv/config'
 import connectDB from './db/db.js'
 import { app } from './app.js';
 
-dotenv.config()
 console.log("Mongo URI:", process.env.MONGODB_URI);
 
 connectDB()
